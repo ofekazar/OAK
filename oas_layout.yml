@@ -23,22 +23,22 @@ points:
           key:
             bind: [, , 2, 2]
             footprints.choc.nets:
-              from: P04
+              from: P15
           row_overrides:
             shift_key:
               footprints.choc.nets:
-                to: P08
+                to: P8
             mod_key:
               bind: [4, , , ]
               footprints:
                 choc:
                   nets:
-                    to: P09
+                    to: P9
                 diode:
                   type: diode
                   nets:
-                    from: P04
-                    to: P04
+                    from: P15
+                    to: P15
                   anchor:
                     shift: [0, 0.5cy + 1.5]
         pinky:
@@ -47,7 +47,7 @@ points:
           key:
             bind: [, , , 2]
             footprints.choc.nets:
-              from: P15
+              from: P4
           rows:
             bottom:
             home:
@@ -60,8 +60,8 @@ points:
               footprints.diode:
                 type: diode
                 nets:
-                  from: P15
-                  to: P15
+                  from: P4
+                  to: P4
                 anchor:
                   shift: [0, 0.5cy + 1.5]
         ring:
@@ -74,8 +74,8 @@ points:
               footprints.diode:
                 type: diode
                 nets:
-                  from: P08
-                  to: P08
+                  from: P18
+                  to: P18
                 anchor:
                   shift: [0, 0.5cy + 1.5]
         middle:
@@ -125,22 +125,22 @@ points:
           stagger: -1
           spread: kx
           key.footprints.choc.nets:
-            from: P07
+            from: P7
           row_overrides:
             far1:
               footprints.choc.nets:
-                to: P08
+                to: P8
               bind: [, 4, 25, ]
             far2:
               footprints:
                 choc:
                   nets:
-                    to: P09
+                    to: P9
                 diode:
                   type: diode
                   nets:
-                    from: P07
-                    to: P07
+                    from: P7
+                    to: P7
                   anchor:
                     shift: [0, 0.5cy + 1.5]
               bind: [2ky + 7, 4, , ]
@@ -148,17 +148,17 @@ points:
         bottom:
           bind: [, , 2]
           footprints.choc.nets:
-            to: P08
+            to: P8
         home:
           footprints.choc.nets:
-            to: P09
+            to: P9
         top:
           footprints.choc.nets:
-            to: P06
+            to: P6
         number:
           bind: [4]
           footprints.choc.nets:
-            to: P05
+            to: P5
     thumbfan:
       key.tags.1u: true
       anchor:
@@ -250,7 +250,7 @@ pcbs:
           D: VCC
         anchor:
           ref: board_inner_far_far1
-          shift: [10, -16]
+          shift: [10, -17]
           rotate: -90
         params:
           reverse: true
