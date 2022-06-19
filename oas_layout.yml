@@ -1,0 +1,257 @@
+units:
+  kx: cx
+  ky: cy
+points:
+  key:
+    footprints:
+      choc:
+        type: choc
+        anchor:
+          rotate: 180
+        params:
+            keycaps: true
+            reverse: true
+  zones:
+    board:
+      key:
+        padding: ky
+        bind: [0, 1, 0, 1]
+        tags:
+          1u: true
+      columns:
+        pinky_outer:
+          key:
+            bind: [, , 2, 2]
+            footprints.choc.nets:
+              from: P04
+          row_overrides:
+            shift_key:
+              footprints.choc.nets:
+                to: P08
+            mod_key:
+              bind: [4, , , ]
+              footprints:
+                choc:
+                  nets:
+                    to: P09
+                diode:
+                  type: diode
+                  nets:
+                    from: P04
+                    to: P04
+                  anchor:
+                    shift: [0, 0.5cy + 1.5]
+        pinky:
+          stagger: 3
+          spread: kx
+          key:
+            bind: [, , , 2]
+            footprints.choc.nets:
+              from: P15
+          rows:
+            bottom:
+            home:
+            top:
+              shift: [-5, 0]
+              bind: [, 5, 3, ]
+            number:
+              shift: [-5, 0]
+              bind: [, 5, , ]
+              footprints.diode:
+                type: diode
+                nets:
+                  from: P15
+                  to: P15
+                anchor:
+                  shift: [0, 0.5cy + 1.5]
+        ring:
+          stagger: 15
+          spread: kx
+          key.footprints.choc.nets:
+            from: P18
+          rows:
+            number:
+              footprints.diode:
+                type: diode
+                nets:
+                  from: P08
+                  to: P08
+                anchor:
+                  shift: [0, 0.5cy + 1.5]
+        middle:
+          stagger: 6
+          spread: kx
+          key.footprints.choc.nets:
+            from: P19
+          rows:
+            number:
+              footprints.diode:
+                type: diode
+                nets:
+                  from: P19
+                  to: P19
+                anchor:
+                  shift: [0, 0.5cy + 1.5]
+        index:
+          stagger: -6
+          spread: kx
+          key.footprints.choc.nets:
+            from: P20
+          rows:
+            number:
+              footprints.diode:
+                type: diode
+                nets:
+                  from: P20
+                  to: P20
+                anchor:
+                  shift: [0, 0.5cy + 1.5]
+        inner:
+          stagger: -2
+          spread: kx
+          key.footprints.choc.nets:
+            from: P21
+          rows:
+            number:
+              bind: [6]
+              footprints.diode:
+                type: diode
+                nets:
+                  from: P21
+                  to: P21
+                anchor:
+                  shift: [0, 0.5cy + 1.5]
+        inner_far:
+          stagger: -1
+          spread: kx
+          key.footprints.choc.nets:
+            from: P07
+          row_overrides:
+            far1:
+              footprints.choc.nets:
+                to: P08
+              bind: [, 4, 25, ]
+            far2:
+              footprints:
+                choc:
+                  nets:
+                    to: P09
+                diode:
+                  type: diode
+                  nets:
+                    from: P07
+                    to: P07
+                  anchor:
+                    shift: [0, 0.5cy + 1.5]
+              bind: [2ky + 7, 4, , ]
+      rows:
+        bottom:
+          bind: [, , 2]
+          footprints.choc.nets:
+            to: P08
+        home:
+          footprints.choc.nets:
+            to: P09
+        top:
+          footprints.choc.nets:
+            to: P06
+        number:
+          bind: [4]
+          footprints.choc.nets:
+            to: P05
+    thumbfan:
+      key.tags.1u: true
+      anchor:
+        ref: board_inner_bottom
+        shift: [-1.4 kx, -1 ky - 9]
+      key.bind: [0, 1, 0, 1]
+      columns:
+        near:
+          spread: kx
+          origin: [-0.5 kx, -0.5 ky]
+          rows.thumb:
+            bind: [14, 18, , ]
+            footprints.choc.nets:
+              from: P10
+              to: GND
+        home:
+          spread: kx
+          rotate: -20
+          origin: [-0.5 kx, -0.5 ky]
+          rows.thumb:
+            footprints.choc.nets:
+              from: P16
+              to: GND
+        far:
+          spread: kx
+          rotate: -20
+          origin: [-0.5 kx, -0.5 ky]
+          rows.thumb:
+            bind: [, , , 12]
+            footprints.choc.nets:
+              from: P14
+              to: GND
+      rows:
+        thumb:
+      
+outlines:
+  exports:
+    raw: 
+      - type: keys
+        side: left
+        size: [1cx-0.5 , 1cx-0.5]
+      - type: rectangle
+        anchor:
+          ref: board_index_home
+    cutout:
+      - type: outline
+        name: raw
+        fillet: 2
+    keycap_outlines:
+      - type: keys
+        side: left
+        size: [1cx - 0.5, 1cy - 0.5] # Choc keycaps are 17.5 x 16.5
+        bound: false    
+        tags: [1u]
+    promicro_location:
+      - type: rectangle
+        size: [18, 37]
+        anchor:
+            ref: board_inner_top
+            shift: [0.5kx, -0.5ky]
+    preview1:
+      [keycap_outlines]
+    preview_promicro_with_keys:
+      [promicro_location, keycap_outlines]
+    preview_promicro_with_cutout:
+      [promicro_location, cutout]
+
+pcbs:
+  oas_keyboard:
+    outlines:
+      board:
+        outline: cutout
+      keycaps:
+        outline: keycap_outlines
+        layer: Eco1.User
+    footprints:
+      promicro:
+        type: promicro_pretty
+        anchor:
+          ref: board_inner_top
+          shift: [1kx + 1, 0.5ky + 4]
+          rotate: -90
+      trrs:
+        type: trrs
+        nets:
+          A: GND
+          B: GND
+          C: P2
+          D: VCC
+        anchor:
+          ref: board_inner_far_far1
+          shift: [10, -16]
+          rotate: -90
+        params:
+          reverse: true
+          symmetric: true
