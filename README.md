@@ -17,7 +17,7 @@ I'm currently working on producing OAK v0.1. A keyboard powered by two promicroe
 ## Roadmap
 I would like to make a few improvements to the boards in the future and they are as follow:
 |Version|Features|
-|---|---|---|---|---|
-|V1.0|Final look for the board. Round off the top and line up the buttom. Make the board ready for production with a case|
+|---|---|
+|V1.0|Final look for the board. Round off the top and line up the buttom. Make the board ready for production with a case.|
 |V1.1|Support SMD cotex M0 processor for slicker design and no diodes.|
-|V1.0S|A smaller stagger for the keys for users with smaller hands|   |   |   |
+|V1.0s|A smaller stagger for the keys for users with smaller hands|
