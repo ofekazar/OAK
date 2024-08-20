@@ -2,7 +2,7 @@
 54 keys split keyboard with large column stagger. This is my personal keyboard made with my hands and specifications in
 mind.
 
-![OAK Image](images/oaktop.jpg)
+![OAK Image](images/oaktop2.jpg)
 
 ## Specs
 * Revisable board split keyboard.
