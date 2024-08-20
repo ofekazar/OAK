@@ -1,6 +1,7 @@
 # OAK Keboard
-54 keys split keyboard with large column stagger. This is my personal keyboard made with my hands and specifications in
-mind.
+54 keys split keyboard with large column stagger. This is my personal keyboard made with my hands and specifications in 
+mind. After using publicly available keyboards for a while I had a list of requirement I wanted for my dream keyboard. I went and made it 
+my self.
 
 ![OAK Image](images/oaktop2.jpg)
 
@@ -13,11 +14,10 @@ mind.
 * 3 Thumb buttons
 
 ## Reasons of Develpment
-After using publicly available keyboards for a while I had a list of requirement I wanted from my dream keyboard. I went and made it 
-my self.
+
 
 ## Software
-Layout: Ergogen 3
-PCB Routing: KiCad
-Printable 3D models: Fusion 360
-Firmware: Fork of the QMK project: https://github.com/ofekazar/oak_firmware
+Layout: Ergogen 3  
+PCB Routing: KiCad  
+Printable 3D models: Fusion 360  
+Firmware: Fork of the QMK project: https://github.com/ofekazar/oak_firmware  
