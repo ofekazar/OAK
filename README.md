@@ -13,9 +13,6 @@ my self.
 * Horizontal line stagger for pinky - I have a hard time with linear pinky line. I need it to flair outward.
 * 3 Thumb buttons
 
-## Reasons of Develpment
-
-
 ## Software
 Layout: Ergogen 3  
 PCB Routing: KiCad  
